@@ -1,6 +1,4 @@
- **Here's a compelling description for your Github project:**
-
-**# Data-Driven Inventory Reduction for Mint Classics**
+# Data-Driven Inventory Reduction for Mint Classics**
 
 **Harnessing the power of data to optimize warehouse storage and streamline operations.**
 
