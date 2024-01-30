@@ -112,7 +112,7 @@ FROM orders o
 WHERE o.status = 'Shipped'
 ORDER BY diff ;
 /*
-# actual_time	expected_time	diff
+	# actual_time		expected_time			diff
 		65			9			-56
 		6			6			0
 		6			6			0
@@ -177,7 +177,7 @@ ORDER BY avg_order_shiped desc;
 
 /*
 
-# warehouseCode	avg_order_shiped
+		# warehouseCode		avg_order_shiped
 			c		4.6142
 			a		4.2229
 			b		4.2101
@@ -256,13 +256,13 @@ group by country
 order by count(*) desc;
 
 /*
-# country	count(distinct customerNumber)
-	USA					36
+	# country	count(distinct customerNumber)
+	USA				36
 	Germany				13
 	France				12
 	Spain				7
 	Australia			5
-	UK					5
+	UK				5
 	Italy				4
 	New Zealand			4
 	Canada				3
@@ -283,7 +283,7 @@ order by count(*) desc;
 	Philippines			1
 	Poland				1
 	Russia				1
-	South Africa		1
+	South Africa			1
 
 Most of our customer from USA , Germany and France 
 so more than 50% of our customer out Side USA 
