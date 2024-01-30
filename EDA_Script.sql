@@ -4,27 +4,37 @@
 
 -- products table
 
-select * from products where productName is null;
+SELECT *
+FROM   products
+WHERE  productname IS NULL; 
 
 -- orderdetails table 
 
-select * from orderdetails where productCode is null;
+SELECT *
+FROM   orderdetails
+WHERE  productcode IS NULL; 
 
 -- orders table
 
-select * from orders where orderDate is null;
+SELECT *
+FROM   orders
+WHERE  orderdate IS NULL; 
 
 -- productlines table 
 
-select * from productlines;
+SELECT *
+FROM   productlines; 
 
 -- warehouses table 
 
-select * from warehouses;
+SELECT *
+FROM   warehouses; 
 
 -- customers table 
 
- select * from customers where customerName is null ;
+SELECT *
+FROM   customers
+WHERE  customername IS NULL; 
 
 /*
  there is no missing data in our data base  
@@ -37,12 +47,11 @@ select * from warehouses;
 
 -- 1- How many products are stored in each warehouse?
 
-SELECT
-    warehouseCode ,
-    sum(quantityInStock) AS total_quantity
-FROM products p
-GROUP BY warehouseCode
-ORDER BY total_quantity DESC;
+SELECT warehousecode,
+       Sum(quantityinstock) AS total_quantity
+FROM   products p
+GROUP  BY warehousecode
+ORDER  BY total_quantity DESC; 
 
 /*
 	warehouseCode|total_quantity|
@@ -55,15 +64,13 @@ ORDER BY total_quantity DESC;
 
 -- 2- How many orders did each warehouse serve?
 
-SELECT
-    warehouseCode ,
-    sum(quantityOrdered) AS total_Orders
-FROM
-    products p
-JOIN orderdetails o 
-ON p.productCode = o.productCode
-GROUP BY warehouseCode
-ORDER BY total_Orders DESC;
+SELECT warehousecode,
+       Sum(quantityordered) AS total_Orders
+FROM   products p
+       JOIN orderdetails o
+         ON p.productcode = o.productcode
+GROUP  BY warehousecode
+ORDER  BY total_orders DESC; 
 
 /*
 	warehouseCode|total_Orders|
@@ -77,16 +84,18 @@ ORDER BY total_Orders DESC;
 
 -- 3- What is the percentage of moving stock for each warehouse?
 
-SELECT
-    p.warehouseCode ,
-    sum(o.quantityOrdered) AS total_Orders,
-    sum(p.quantityInStock) AS total_quantity,
-    ((sum(o.quantityOrdered) / sum(p.quantityInStock)) * 100) AS perecent_of_moving_stock
-FROM products p
-JOIN orderdetails o 
-ON p.productCode = o.productCode
-GROUP BY warehouseCode
-ORDER BY perecent_of_moving_stock DESC;
+SELECT p.warehousecode,
+       Sum(o.quantityordered)                                        AS
+       total_Orders,
+       Sum(p.quantityinstock)                                        AS
+       total_quantity,
+       ( ( Sum(o.quantityordered) / Sum(p.quantityinstock) ) * 100 ) AS
+       perecent_of_moving_stock
+FROM   products p
+       JOIN orderdetails o
+         ON p.productcode = o.productcode
+GROUP  BY warehousecode
+ORDER  BY perecent_of_moving_stock DESC; 
 
 /*
 	warehouseCode|total_Orders|total_quantity|perecent_of_moving_stock|
@@ -104,13 +113,17 @@ ORDER BY perecent_of_moving_stock DESC;
 
 -- 4- How much time does it usually take to deliver an order?
 
-SELECT 
-DATEDIFF(shippedDate, orderDate)   AS actual_time 
-,DATEDIFF(requiredDate , orderDate) AS expected_time
-,(DATEDIFF(requiredDate , orderDate)) - (DATEDIFF(shippedDate, orderDate)) AS diff 
-FROM orders o 
-WHERE o.status = 'Shipped'
-ORDER BY diff ;
+SELECT Datediff(shippeddate, orderdate)
+       AS
+       actual_time,
+       Datediff(requireddate, orderdate)
+       AS expected_time,
+       ( Datediff(requireddate, orderdate) ) - (
+       Datediff(shippeddate, orderdate) ) AS
+       diff
+FROM   orders o
+WHERE  o.status = 'Shipped'
+ORDER  BY diff; 
 /*
 	# actual_time		expected_time			diff
 		65			9			-56
@@ -128,14 +141,16 @@ ORDER BY diff ;
 		we got an outlier 
 		lets invstigate more 
 */
+
 -- 5- Outlier investigation
-select o.orderNumber
-,o.comments 
-from orders o 
-join orderdetails od 
-on o.orderNumber = od.orderNumber 
-where DATEDIFF(o.requiredDate , o.shippedDate) < 0
-group by o.orderNumber,o.comments ;
+SELECT o.ordernumber,
+       o.comments
+FROM   orders o
+       JOIN orderdetails od
+         ON o.ordernumber = od.ordernumber
+WHERE  Datediff(o.requireddate, o.shippeddate) < 0
+GROUP  BY o.ordernumber,
+          o.comments; 
 
 /*
 	# orderNumber		comments
@@ -147,13 +162,14 @@ group by o.orderNumber,o.comments ;
 
 -- 6- How much earlier than usual do we typically deliver orders?
 
-SELECT  
-(DATEDIFF(requiredDate , orderDate)) - (DATEDIFF(shippedDate, orderDate)) AS diff_in_Days 
-,count(*)
-FROM orders o 
-WHERE o.status = 'Shipped'
-GROUP BY diff_in_Days
-ORDER BY count(*) desc;
+SELECT ( Datediff(requireddate, orderdate) ) - (
+       Datediff(shippeddate, orderdate) ) AS
+       diff_in_Days,
+       Count(*)
+FROM   orders o
+WHERE  o.status = 'Shipped'
+GROUP  BY diff_in_days
+ORDER  BY Count(*) DESC; 
 
 /*
 	# diff_in_Days  count(*) 
@@ -166,14 +182,17 @@ ORDER BY count(*) desc;
 
 
 -- 7- What is the average delivery time (in days) for each warehouse?
-SELECT  p.warehouseCode  , 
-avg(DATEDIFF(o.requiredDate , o.shippedDate)) as avg_order_shiped
-FROM orders o  JOIN orderdetails od 
-ON o.orderNumber = od.orderNumber  JOIN products p 
-ON od.productCode = p.productCode
-WHERE o.status = 'Shipped'
-GROUP BY p.warehouseCode  
-ORDER BY avg_order_shiped desc;
+
+SELECT p.warehousecode,
+       Avg(Datediff(o.requireddate, o.shippeddate)) AS avg_order_shiped
+FROM   orders o
+       JOIN orderdetails od
+         ON o.ordernumber = od.ordernumber
+       JOIN products p
+         ON od.productcode = p.productcode
+WHERE  o.status = 'Shipped'
+GROUP  BY p.warehousecode
+ORDER  BY avg_order_shiped DESC; 
 
 /*
 
@@ -189,10 +208,13 @@ the bigger is better
 -- 8- How many orders are shipped from each warehouse? 
 
 
-SELECT p.warehouseCode ,count(o.orderNumber) 
-FROM products p JOIN orderdetails o ON p.productCode = o.productCode
-GROUP BY p.warehouseCode 
-ORDER BY count(o.orderNumber) ;
+SELECT p.warehousecode,
+       Count(o.ordernumber)
+FROM   products p
+       JOIN orderdetails o
+         ON p.productcode = o.productcode
+GROUP  BY p.warehousecode
+ORDER  BY Count(o.ordernumber);
 
 /* 
 	warehouseCode|count(o.orderNumber)|
@@ -208,10 +230,15 @@ ORDER BY count(o.orderNumber) ;
 
 -- 9- What types of products are stored in each warehouse?
 
-SELECT p.warehouseCode,p.productLine  ,count(o.orderNumber) 
-FROM products p JOIN orderdetails o ON p.productCode = o.productCode
-GROUP BY p.warehouseCode,p.productLine  
-ORDER BY count(o.orderNumber) ;
+SELECT p.warehousecode,
+       p.productline,
+       Count(o.ordernumber)
+FROM   products p
+       JOIN orderdetails o
+         ON p.productcode = o.productcode
+GROUP  BY p.warehousecode,
+          p.productline
+ORDER  BY Count(o.ordernumber); 
 
 /*
 	warehouseCode|productLine     |count(o.orderNumber)|
@@ -227,14 +254,15 @@ ORDER BY count(o.orderNumber) ;
 
 -- 10- What subcategories do each of the products belong to?
 
-SELECT p.warehouseCode
-,p.productLine  
-,count(p.productCode) 
-, sum(p.quantityInStock)
-FROM products p 
-GROUP BY p.warehouseCode,p.productLine  
-ORDER BY count(p.productCode) ,sum(p.quantityInStock);
-
+SELECT p.warehousecode,
+       p.productline,
+       Count(p.productcode),
+       Sum(p.quantityinstock)
+FROM   products p
+GROUP  BY p.warehousecode,
+          p.productline
+ORDER  BY Count(p.productcode),
+          Sum(p.quantityinstock); 
 /*
 	warehouseCode|productLine     |count(p.productCode)|sum(p.quantityInStock)|
 	-------------+----------------+--------------------+----------------------+
@@ -249,11 +277,11 @@ ORDER BY count(p.productCode) ,sum(p.quantityInStock);
 */
 
 -- 11- Where does the majority of our customer base reside?
-select  distinct country 
-,count(distinct customerNumber)
-from customers
-group by country 
-order by count(*) desc;
+SELECT DISTINCT country,
+                Count(DISTINCT customernumber)
+FROM   customers
+GROUP  BY country
+ORDER  BY Count(*) DESC; 
 
 /*
 	# country	count(distinct customerNumber)
