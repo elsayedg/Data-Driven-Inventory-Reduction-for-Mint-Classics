@@ -1,0 +1,183 @@
+warehousecode,productline,year,month,total_items_ordered
+c,"Vintage Cars",2003,1,572
+b,"Classic Cars",2003,1,334
+d,"Trucks and Buses",2003,1,370
+d,Trains,2003,1,81
+b,"Classic Cars",2003,2,120
+c,"Vintage Cars",2003,2,301
+d,Trains,2003,2,38
+d,Ships,2003,2,301
+a,Planes,2003,2,460
+a,Motorcycles,2003,2,229
+b,"Classic Cars",2003,3,929
+a,Motorcycles,2003,3,170
+c,"Vintage Cars",2003,3,563
+d,"Trucks and Buses",2003,3,93
+b,"Classic Cars",2003,4,465
+d,"Trucks and Buses",2003,4,279
+d,Trains,2003,4,69
+c,"Vintage Cars",2003,4,244
+d,Ships,2003,4,323
+a,Planes,2003,4,401
+a,Motorcycles,2003,4,212
+a,Motorcycles,2003,5,251
+b,"Classic Cars",2003,5,934
+c,"Vintage Cars",2003,5,584
+d,"Trucks and Buses",2003,5,248
+b,"Classic Cars",2003,6,338
+d,"Trucks and Buses",2003,6,160
+d,Trains,2003,6,116
+c,"Vintage Cars",2003,6,313
+d,Ships,2003,6,319
+a,Planes,2003,6,416
+a,Motorcycles,2003,6,23
+a,Motorcycles,2003,7,408
+b,"Classic Cars",2003,7,961
+c,"Vintage Cars",2003,7,519
+d,"Trucks and Buses",2003,7,257
+d,"Trucks and Buses",2003,8,136
+b,"Classic Cars",2003,8,339
+c,"Vintage Cars",2003,8,264
+d,Trains,2003,8,106
+d,Ships,2003,8,318
+a,Planes,2003,8,371
+a,Motorcycles,2003,8,440
+a,Motorcycles,2003,9,47
+b,"Classic Cars",2003,9,1139
+c,"Vintage Cars",2003,9,587
+d,"Trucks and Buses",2003,9,410
+d,Trains,2003,9,93
+d,Ships,2003,9,234
+c,"Vintage Cars",2003,10,1143
+d,Ships,2003,10,428
+b,"Classic Cars",2003,10,2032
+a,Planes,2003,10,879
+a,Motorcycles,2003,10,661
+d,"Trucks and Buses",2003,10,456
+d,Trains,2003,10,132
+b,"Classic Cars",2003,11,3879
+a,Motorcycles,2003,11,1163
+c,"Vintage Cars",2003,11,2260
+d,"Trucks and Buses",2003,11,1238
+d,Trains,2003,11,320
+d,Ships,2003,11,921
+a,Planes,2003,11,1081
+c,"Vintage Cars",2003,12,563
+a,Planes,2003,12,225
+a,Motorcycles,2003,12,427
+b,"Classic Cars",2003,12,1292
+d,"Trucks and Buses",2003,12,409
+d,Trains,2003,12,45
+b,"Classic Cars",2004,1,1073
+c,"Vintage Cars",2004,1,843
+d,Trains,2004,1,78
+d,Ships,2004,1,332
+a,Planes,2004,1,413
+a,Motorcycles,2004,1,460
+d,"Trucks and Buses",2004,1,46
+d,"Trucks and Buses",2004,2,346
+b,"Classic Cars",2004,2,1148
+d,Trains,2004,2,73
+c,"Vintage Cars",2004,2,314
+d,Ships,2004,2,319
+a,Planes,2004,2,424
+a,Motorcycles,2004,2,493
+c,"Vintage Cars",2004,3,697
+b,"Classic Cars",2004,3,695
+d,"Trucks and Buses",2004,3,348
+d,Trains,2004,3,137
+d,Ships,2004,3,321
+a,Planes,2004,3,134
+a,Planes,2004,4,274
+a,Motorcycles,2004,4,361
+c,"Vintage Cars",2004,4,618
+b,"Classic Cars",2004,4,824
+b,"Classic Cars",2004,5,610
+d,"Trucks and Buses",2004,5,353
+c,"Vintage Cars",2004,5,329
+d,Trains,2004,5,131
+d,Ships,2004,5,305
+a,Planes,2004,5,424
+a,Motorcycles,2004,5,536
+b,"Classic Cars",2004,6,1159
+c,"Vintage Cars",2004,6,863
+d,"Trucks and Buses",2004,6,414
+d,Trains,2004,6,77
+d,Ships,2004,6,327
+a,Planes,2004,6,415
+a,Motorcycles,2004,6,493
+b,"Classic Cars",2004,7,1263
+c,"Vintage Cars",2004,7,883
+d,"Trucks and Buses",2004,7,380
+d,Trains,2004,7,135
+d,Ships,2004,7,267
+a,Planes,2004,7,434
+a,Motorcycles,2004,7,214
+b,"Classic Cars",2004,8,1885
+a,Motorcycles,2004,8,675
+d,"Trucks and Buses",2004,8,351
+c,"Vintage Cars",2004,8,849
+d,Trains,2004,8,109
+d,Ships,2004,8,311
+a,Planes,2004,8,384
+b,"Classic Cars",2004,9,799
+c,"Vintage Cars",2004,9,793
+d,"Trucks and Buses",2004,9,415
+d,Trains,2004,9,88
+d,Ships,2004,9,286
+a,Planes,2004,9,360
+a,Motorcycles,2004,9,430
+c,"Vintage Cars",2004,10,1385
+b,"Classic Cars",2004,10,1786
+d,"Trucks and Buses",2004,10,750
+d,Trains,2004,10,216
+d,Ships,2004,10,529
+a,Planes,2004,10,390
+a,Motorcycles,2004,10,427
+b,"Classic Cars",2004,11,3669
+a,Planes,2004,11,1325
+d,Ships,2004,11,747
+c,"Vintage Cars",2004,11,2305
+a,Motorcycles,2004,11,1403
+d,"Trucks and Buses",2004,11,1052
+d,Trains,2004,11,177
+b,"Classic Cars",2004,12,1174
+d,"Trucks and Buses",2004,12,569
+d,Ships,2004,12,565
+c,"Vintage Cars",2004,12,985
+d,Trains,2004,12,188
+a,Planes,2004,12,843
+a,Motorcycles,2004,12,484
+a,Motorcycles,2005,1,377
+b,"Classic Cars",2005,1,1333
+c,"Vintage Cars",2005,1,774
+d,"Trucks and Buses",2005,1,337
+d,Trains,2005,1,79
+d,Ships,2005,1,320
+a,Planes,2005,1,175
+a,Motorcycles,2005,2,429
+a,Planes,2005,2,270
+b,"Classic Cars",2005,2,1352
+c,"Vintage Cars",2005,2,776
+d,"Trucks and Buses",2005,2,356
+d,Trains,2005,2,108
+d,Ships,2005,2,102
+a,Planes,2005,3,883
+d,Ships,2005,3,545
+c,"Vintage Cars",2005,3,813
+a,Motorcycles,2005,3,513
+b,"Classic Cars",2005,3,958
+d,"Trucks and Buses",2005,3,396
+d,Trains,2005,3,99
+a,Motorcycles,2005,4,898
+b,"Classic Cars",2005,4,1468
+a,Planes,2005,4,508
+d,Ships,2005,4,76
+c,"Vintage Cars",2005,4,886
+b,"Classic Cars",2005,5,1624
+d,"Trucks and Buses",2005,5,832
+c,"Vintage Cars",2005,5,907
+d,Trains,2005,5,123
+d,Ships,2005,5,336
+a,Planes,2005,5,383
+a,Motorcycles,2005,5,554
