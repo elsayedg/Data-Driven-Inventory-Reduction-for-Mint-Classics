@@ -62,7 +62,7 @@ ORDER  BY total_quantity DESC;
 	d            |         79380|
 */
 
--- 2- How many orders did each warehouse serve?
+-- 2- How many items did each warehouse serve?
 
 SELECT warehousecode,
        Sum(quantityordered) AS total_Orders
@@ -86,7 +86,7 @@ ORDER  BY total_orders DESC;
 
 SELECT p.warehousecode,
        Sum(o.quantityordered)                                        AS
-       total_Orders,
+       total_items_Orders,
        Sum(p.quantityinstock)                                        AS
        total_quantity,
        ( ( Sum(o.quantityordered) / Sum(p.quantityinstock) ) * 100 ) AS
@@ -98,12 +98,12 @@ GROUP  BY warehousecode
 ORDER  BY perecent_of_moving_stock DESC; 
 
 /*
-	warehouseCode|total_Orders|total_quantity|perecent_of_moving_stock|
-	-------------+------------+--------------+------------------------+
-	d South      |       22351|       2186871|                  1.0221|
-	a North      |       24650|       3659553|                  0.6736|
-	c west       |       22933|       3439570|                  0.6667|
-	b East       |       35582|       5844033|                  0.6089|
+	warehouseCode|total_items_Orders|total_quantity|perecent_of_moving_stock|
+	-------------+------------------+--------------+------------------------+
+	d South      |       	   22351|       2186871|                  1.0221|
+	a North      |     	   24650|       3659553|                  0.6736|
+	c west       |     	   22933|       3439570|                  0.6667|
+	b East       |     	   35582|       5844033|                  0.6089|
 	
     
     as we can see the South warehouse has the highst percent of moving stock
@@ -154,8 +154,8 @@ GROUP  BY o.ordernumber,
 
 /*
 	# orderNumber		comments
-			10165		This order was on hold because customers's credit limit had been exceeded. 
-						Order will ship when payment is received
+		10165		This order was on hold because customers's credit limit had been exceeded. 
+				Order will ship when payment is received
 	
     it's a payment issue not supplychain issue 
 */
@@ -173,15 +173,17 @@ ORDER  BY Count(*) DESC;
 
 /*
 	# diff_in_Days  count(*) 
-				3  		54
-				5  		45
-				4  		42
+		3  	54
+		5  	45
+		4  	42
 		etc 
 	most of the time we deliver early by 3 to 5 days 
 */
 
 
 -- 7- What is the average delivery time (in days) for each warehouse?
+-- this shows how much early each warehouse deliver 
+-- the bigger number is better 
 
 SELECT p.warehousecode,
        Avg(Datediff(o.requireddate, o.shippeddate)) AS avg_order_shiped
@@ -202,33 +204,9 @@ ORDER  BY avg_order_shiped DESC;
 			b		4.2101
 			d		3.8629
 
-the bigger is better 
 */
 
--- 8- How many orders are shipped from each warehouse? 
-
-
-SELECT p.warehousecode,
-       Count(o.ordernumber)
-FROM   products p
-       JOIN orderdetails o
-         ON p.productcode = o.productcode
-GROUP  BY p.warehousecode
-ORDER  BY Count(o.ordernumber);
-
-/* 
-	warehouseCode|count(o.orderNumber)|
-	-------------+--------------------+
-	d            |                 634|
-	c            |                 657|
-	a            |                 695|
-	b            |                1010|
-	
-    most came from the east which has the bigest inventory instock items 
-	lets see the products in each 
-*/
-
--- 9- What types of products are stored in each warehouse?
+-- 8- What types of products are stored in each warehouse?
 
 SELECT p.warehousecode,
        p.productline,
@@ -252,7 +230,7 @@ ORDER  BY Count(o.ordernumber);
 	b            |Classic Cars    |                1010|
 */
 
--- 10- What subcategories do each of the products belong to?
+-- 9- What subcategories do each of the products belong to?
 
 SELECT p.warehousecode,
        p.productline,
@@ -276,7 +254,7 @@ ORDER  BY Count(p.productcode),
 
 */
 
--- 11- Where does the majority of our customer base reside?
+-- 10- Where does the majority of our customer base reside?
 SELECT DISTINCT country,
                 Count(DISTINCT customernumber)
 FROM   customers
