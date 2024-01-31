@@ -63,10 +63,10 @@ ORDER  BY perecent_of_moving_stock DESC;
 
 /*
 # warehouseCode	total_Orders	total_quantity	perecent_of_moving_stock
-		d			22351			1093435.5		2.0441
-		a			24650			1829776.5		1.3472
-		c			22933			1719785.0		1.3335
-		b			35582			2922016.5		1.2177
+	d	22351		1093435.5		2.0441
+	a	24650		1829776.5		1.3472
+	c	22933		1719785.0		1.3335
+	b	35582		2922016.5		1.2177
 
 */
 
@@ -92,13 +92,13 @@ ORDER  BY warehousecode,
         
 /*
 	# warehouseCode	productLine		totalQuantity	TotalPerWarhouse
-			a		Motorcycles			69401			131688
-			a		Planes				62287			131688
-			b		Classic Cars		219183			219183
-			c		Vintage Cars		124880			124880
-			d		Ships				26833			79380
-			d		Trains				16696			79380
-			d		Trucks and Buses	35851			79380
+		a	Motorcycles		69401			131688
+		a	Planes			62287			131688
+		b	Classic Cars		219183			219183
+		c	Vintage Cars		124880			124880
+		d	Ships			26833			79380
+		d	Trains			16696			79380
+		d	Trucks and Buses	35851			79380
 
 */
 
@@ -109,10 +109,10 @@ SELECT *
 FROM   warehouses; 
 /*
 		# warehouseCode	warehouseName	warehousePctCap
-				a			North			72
-				b			East			67
-				c			West			50
-				d			South			75
+			a	North			72
+			b	East			67
+			c	West			50
+			d	South			75
 
 */
 
@@ -123,20 +123,20 @@ FROM   warehouses;
 here is the results  quantityInStock
 
 from this we can calculate the items it takes 
-			  Code	Name	percentage    Capacityin#			   emptyFor		  
-				a	North		72		(131,688/.72) = 182,900	     51,212
-				b	East		67		(219,183/.67) = 327,139 	107,956
-				c	West		50		(124,880/.50) = 249,760     124,880
-				d	South		75		( 79,380/.75) = 105,840      26,460
+		Code	Name		percentage    		Capacityin#		emptyFor		  
+		a	North		72		(131,688/.72) = 182,900	        51,212
+		b	East		67		(219,183/.67) = 327,139 	107,956
+		c	West		50		(124,880/.50) = 249,760         124,880
+		d	South		75		( 79,380/.75) = 105,840          26,460
                 
                 
 Taking into account the average delivery time
 
 	    warehouseCode	avg_order_shiped
-			c				4.6142
-			a				4.2229
-			b				4.2101
-			d				3.8629
+		c		  4.6142
+		a		  4.2229
+		b		  4.2101
+		d		  3.8629
 
 */
 
