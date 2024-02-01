@@ -1,4 +1,5 @@
 # Data-Driven Inventory Reduction for Mint Classics
+![alt text](https://github.com/elsayedg/Data-Driven-Inventory-Reduction-for-Mint-Classics/blob/main/Source/Warehousing%20Revamp.png)
 
 **Harnessing the power of data to optimize warehouse storage and streamline operations.**
 
@@ -7,7 +8,7 @@ This project dives into the world of inventory management and data-driven decisi
 **Key Project Steps:**
 
 - **Exploratory Data Analysis:** 
-  - will be found in this script [EDA Link](https://github.com/elsayedg/Data-Driven-Inventory-Reduction-for-Mint-Classics/blob/main/EDA_Script.sql)
+  - The script [EDA Link](https://github.com/elsayedg/Data-Driven-Inventory-Reduction-for-Mint-Classics/blob/main/EDA_Script.sql)
   - After ensuring data quality, I used these questions to investigate the data.
     - 1- How many products are stored in each warehouse?
     - 2- How many items did each warehouse serve?
