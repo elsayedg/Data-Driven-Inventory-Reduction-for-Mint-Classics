@@ -22,7 +22,7 @@ This project dives into the world of inventory management and data-driven decisi
     - 10-Where does the majority of our customer base reside?
 
 - **Data Visulizations:**
-  - To get better feel of Data i used this [Query](https://github.com/elsayedg/Data-Driven-Inventory-Reduction-for-Mint-Classics/blob/main/Source/Trend%20Data%20Script.sql) to get the data .
+  - To get better feel of Data i used this [Query](https://github.com/elsayedg/Data-Driven-Inventory-Reduction-for-Mint-Classics/blob/main/Trend%20Data%20Script.sql) to get the data .
   - Then Excle [link to the file](https://github.com/elsayedg/Data-Driven-Inventory-Reduction-for-Mint-Classics/blob/main/Source/Trend.xlsx) to make this viz.
     - ![alt text](https://github.com/elsayedg/Data-Driven-Inventory-Reduction-for-Mint-Classics/blob/main/Source/img/1-%20items_trend.png)
     - ![alt text](https://github.com/elsayedg/Data-Driven-Inventory-Reduction-for-Mint-Classics/blob/main/Source/img/2-%20Items_per_year.png)
