@@ -3,7 +3,7 @@
 
 **Harnessing the power of data to optimize warehouse storage and streamline operations.**
 
-This project dives into the world of inventory management and data-driven decision-making, showcasing how a fictional retailer of classic model cars, Mint Classics, can leverage insights from a relational database to make strategic inventory decisions.
+This project dives into inventory management and data-driven decision-making, showcasing how a fictional retailer of classic model cars, Mint Classics, can leverage insights from a relational database to make strategic inventory decisions.
 
 **Key Project Steps:**
 
@@ -16,24 +16,24 @@ This project dives into the world of inventory management and data-driven decisi
     - 4- How much time does it usually take to deliver an order?
     - 5- Outlier investigation
     - 6- How much earlier than usual do we typically deliver orders?
-    - 7- What is the average delivery time (in days) for each warehouse?
+    - 7- What is each warehouse's average delivery time (in days)?
     - 8- What types of products are stored in each warehouse?
     - 9-What subcategories do each of the products belong to?
     - 10-Where does the majority of our customer base reside?
 
 - **Data Visulizations:**
-  - To get better feel of Data i used this [Query](https://github.com/elsayedg/Data-Driven-Inventory-Reduction-for-Mint-Classics/blob/main/Trend%20Data%20Script.sql) to get the data .
+  - To get a better feel of Data I used this [Query](https://github.com/elsayedg/Data-Driven-Inventory-Reduction-for-Mint-Classics/blob/main/Trend%20Data%20Script.sql) to get the data.
   - Then Excle [link to the file](https://github.com/elsayedg/Data-Driven-Inventory-Reduction-for-Mint-Classics/blob/main/Source/Trend.xlsx) to make this viz.
     - ![alt text](https://github.com/elsayedg/Data-Driven-Inventory-Reduction-for-Mint-Classics/blob/main/Source/img/1-%20items_trend.png)
     - ![alt text](https://github.com/elsayedg/Data-Driven-Inventory-Reduction-for-Mint-Classics/blob/main/Source/img/2-%20Items_per_year.png)
     - ![alt text](https://github.com/elsayedg/Data-Driven-Inventory-Reduction-for-Mint-Classics/blob/main/Source/img/3-%20Warehouse_trend.png)
 
 - **Targeted Insights:**
-  - In this [Script](https://github.com/elsayedg/Data-Driven-Inventory-Reduction-for-Mint-Classics/blob/main/Analysis_Script.sql) the analyis leverage the past steps and answer these queation .
-    - 1- what is the moving stocks per year for each warehouse?
-    - 2- what if analysis: reducing the stock by 50 %
-    - 3- How to rearrange the Wahehouses?
-    - 4- what are the capacity?
+  - In this [Script](https://github.com/elsayedg/Data-Driven-Inventory-Reduction-for-Mint-Classics/blob/main/Analysis_Script.sql) the analyses leverage the past steps and answer these questions.
+    - 1- what are the moving stocks per year for each warehouse?
+    - 2- what-if analysis: reducing the stock by 50 %
+    - 3- How to rearrange the Warehouses?
+    - 4- what is the capacity?
     - 5- Making the calculations
     - 6- the Recommendations 
 
