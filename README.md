@@ -1,5 +1,5 @@
 # Data-Driven Inventory Reduction for Mint Classics
-![alt text]([cover](https://github.com/elsayedg/Data-Driven-Inventory-Reduction-for-Mint-Classics/blob/main/img/enventory%20analysisi.jpg))
+![alt text](https://github.com/elsayedg/Data-Driven-Inventory-Reduction-for-Mint-Classics/blob/main/img/enventory%20analysisi.jpg)
 
 **Harnessing the power of data to optimize warehouse storage and streamline operations.**
 
@@ -24,9 +24,9 @@ This project dives into inventory management and data-driven decision-making, sh
 - **Data Visulizations:**
   - To get a better feel of Data I used this [Query](https://github.com/elsayedg/Data-Driven-Inventory-Reduction-for-Mint-Classics/blob/main/Trend%20Data%20Script.sql) to get the data.
   - Then Excle [link to the file](https://github.com/elsayedg/Data-Driven-Inventory-Reduction-for-Mint-Classics/blob/main/Source/Trend.xlsx) to make this viz.
-    - ![alt text](https://github.com/elsayedg/Data-Driven-Inventory-Reduction-for-Mint-Classics/blob/main/img/1-%20items_trend.png)
-    - ![alt text](https://github.com/elsayedg/Data-Driven-Inventory-Reduction-for-Mint-Classics/blob/main/img/2-%20Items_per_year.png)
-    - ![alt text](https://github.com/elsayedg/Data-Driven-Inventory-Reduction-for-Mint-Classics/blob/main/img/3-%20Warehouse_trend.png)
+    - ![alt text](https://github.com/elsayedg/Data-Driven-Inventory-Reduction-for-Mint-Classics/blob/main/img/Excel/1-%20items_trend.png)
+    - ![alt text](https://github.com/elsayedg/Data-Driven-Inventory-Reduction-for-Mint-Classics/blob/main/img/Excel/2-%20Items_per_year.png)
+    - ![alt text](https://github.com/elsayedg/Data-Driven-Inventory-Reduction-for-Mint-Classics/blob/main/img/Excel/3-%20Warehouse_trend.png)
 
 - **Targeted Insights:**
   - In this [Script](https://github.com/elsayedg/Data-Driven-Inventory-Reduction-for-Mint-Classics/blob/main/Analysis_Script.sql) the analyses leverage the past steps and answer these questions.
