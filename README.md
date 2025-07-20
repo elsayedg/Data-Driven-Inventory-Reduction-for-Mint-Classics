@@ -1,5 +1,5 @@
 # Data-Driven Inventory Reduction for Mint Classics
-![alt text](https://github.com/elsayedg/Data-Driven-Inventory-Reduction-for-Mint-Classics/blob/main/img/Warehousing%20Revamp.png)
+![alt text](img/enventory analysisi.jpg)
 
 **Harnessing the power of data to optimize warehouse storage and streamline operations.**
 
