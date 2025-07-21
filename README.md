@@ -1,4 +1,4 @@
-# Mint Classic Cars – Data-Driven Inventory Optimization
+# 🧠 Smart Inventory Optimization for Mint Classics
 
 **Harnessing the power of data to optimize warehouse storage and streamline operations.**
 
