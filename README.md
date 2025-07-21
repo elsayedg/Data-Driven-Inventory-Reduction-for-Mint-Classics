@@ -2,6 +2,10 @@
 
 **Harnessing the power of data to optimize warehouse storage and streamline operations.**
 
+<p align="center">
+  <img src="img/coverimg.png" alt="Smart Inventory Optimization Cover" width="100%">
+</p>
+
 This project explores how Mint Classics, a fictional model car retailer, can optimize inventory and warehouse operations through SQL-based analysis, Excel visualizations, Power BI dashboards, and scenario simulation.
 
 ---
