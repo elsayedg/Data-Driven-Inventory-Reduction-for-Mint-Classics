@@ -62,11 +62,17 @@ This end-to-end analytics project demonstrates how data from a relational databa
 ---
 
 ## 📁 Files Included
-- `warehouse_analysis.sql`: SQL logic and data queries
-- `inventory_dashboard.xlsx`: pivot charts and visual analysis
-- `inventory_dashboard.pbix`: full Power BI dashboard (4 pages)
-- `case_summary.pdf`: one-page business case summary
-- `Final_Report.pdf`: PDF export with visual insights and KPI findings
+
+- `1-Data/` — Cleaned datasets used across all tools (Excel, SQL, Power BI)
+- `2-SQL/` — SQL scripts used for initial data exploration and analysis
+- `3-Excel/` — Excel workbook with pivot tables and visual breakdowns
+- `4-PowerBI/` — Power BI project file (`.pbix`) with full dashboard (4 pages)
+- `img/` — Project visuals and screenshots
+
+## 📄 Key Documents
+
+- `Mint_Inventory_Case_Summary.pdf` — One-page business summary with key findings and recommendation
+- `Mint_Inventory_Optimization_ElsayedAboelmaaty.pdf` — Final Power BI dashboard report (with cover page and all visuals)
 
 ---
 
