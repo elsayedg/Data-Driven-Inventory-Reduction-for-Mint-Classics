@@ -1,68 +1,84 @@
-# Data-Driven Inventory Reduction for Mint Classics
-![alt text](https://github.com/elsayedg/Data-Driven-Inventory-Reduction-for-Mint-Classics/blob/main/img/enventory%20analysisi.jpg)
+# Mint Classic Cars – Data-Driven Inventory Optimization
 
 **Harnessing the power of data to optimize warehouse storage and streamline operations.**
 
-This project dives into inventory management and data-driven decision-making, showcasing how a fictional retailer of classic model cars, Mint Classics, can leverage insights from a relational database to make strategic inventory decisions.
+This project explores how Mint Classics, a fictional model car retailer, can optimize inventory and warehouse operations through SQL-based analysis, Excel visualizations, Power BI dashboards, and scenario simulation.
 
-**Key Project Steps:**
+---
 
-- **Exploratory Data Analysis:** 
-  - The script [EDA Link](https://github.com/elsayedg/Data-Driven-Inventory-Reduction-for-Mint-Classics/blob/main/EDA_Script.sql)
-  - After ensuring data quality, I used these questions to investigate the data.
-    - 1- How many products are stored in each warehouse?
-    - 2- How many items did each warehouse serve?
-    - 3- What is the percentage of moving stock for each warehouse?
-    - 4- How much time does it usually take to deliver an order?
-    - 5- Outlier investigation
-    - 6- How much earlier than usual do we typically deliver orders?
-    - 7- What is each warehouse's average delivery time (in days)?
-    - 8- What types of products are stored in each warehouse?
-    - 9-What subcategories do each of the products belong to?
-    - 10-Where does the majority of our customer base reside?
+## 🌟 Project Summary
+This end-to-end analytics project demonstrates how data from a relational database can be used to identify inefficiencies in warehouse inventory, simulate reduction strategies, and recommend structural changes such as warehouse consolidation. Power BI is used to deliver an interactive visual dashboard and business recommendations.
 
-- **Data Visulizations:**
-  - To get a better feel of Data I used this [Query](https://github.com/elsayedg/Data-Driven-Inventory-Reduction-for-Mint-Classics/blob/main/Trend%20Data%20Script.sql) to get the data.
-  - Then Excle [link to the file](https://github.com/elsayedg/Data-Driven-Inventory-Reduction-for-Mint-Classics/blob/main/Source/Trend.xlsx) to make this viz.
-    - ![alt text](https://github.com/elsayedg/Data-Driven-Inventory-Reduction-for-Mint-Classics/blob/main/img/Excel/1-%20items_trend.png)
-    - ![alt text](https://github.com/elsayedg/Data-Driven-Inventory-Reduction-for-Mint-Classics/blob/main/img/Excel/2-%20Items_per_year.png)
-    - ![alt text](https://github.com/elsayedg/Data-Driven-Inventory-Reduction-for-Mint-Classics/blob/main/img/Excel/3-%20Warehouse_trend.png)
+---
 
-- **Targeted Insights:**
-  - In this [Script](https://github.com/elsayedg/Data-Driven-Inventory-Reduction-for-Mint-Classics/blob/main/Analysis_Script.sql) the analyses leverage the past steps and answer these questions.
-    - 1- what are the moving stocks per year for each warehouse?
-    - 2- what-if analysis: reducing the stock by 50 %
-    - 3- How to rearrange the Warehouses?
-    - 4- what is the capacity?
-    - 5- Making the calculations
-    - 6- the Recommendations 
+## 🎯 Project Objectives
+- Explore current inventory composition and trends across four warehouses
+- Determine critical KPIs: delivery time, moving stock %, utilization
+- Simulate 50% to 70% inventory reduction through what-if analysis
+- Recommend cost-effective operational improvements, including consolidation of underperforming warehouses
 
-- **Recommendation:** <br>
-    While reducing overall stock by 50% aligns with industry benchmarks and long-term inventory management, <br>
-    it's a significant move that requires careful planning and may not be ideal immediately. 
-    As a more immediate and actionable step,<br> I recommend consolidating the inventory of warehouse D with warehouse C. 
-   <br> This approach leverages C's ample capacity (124,880 items) to accommodate D's existing inventory (79,380) 
-    while simplifying operations and potentially reducing costs. <br>
-    While C's average daily delivery time is slightly longer than D's (4.6 days vs. 3.8 days), <br>
-    this minor trade-off is outweighed by the efficiency gains and cost savings of consolidation. <br>
-    This first step can then pave the way for further inventory reductions down the line, 
-    ensuring a smoother and more strategic approach to optimizing stock levels.
+---
 
-- **Tools and Technologies:**
-  - MySQL Workbench
-  - SQL queries
-  - Data visualization (Excel - Pivot tables)
+## 📊 Key Analysis Steps
 
-**Project Objectives:**
+### 1. Exploratory Data Analysis (SQL + Excel)
+- Product counts by warehouse
+- Items served per location
+- % of moving stock (annual)
+- Average delivery times
+- Outlier and early delivery investigation
+- Product categories/subcategories analysis
+- Regional customer distribution
 
-1. Explore current inventory composition and trends.
-2. Determine critical factors influencing inventory management.
-3. Provide actionable insights and recommendations for inventory reduction and optimization.
-4. Support a data-driven decision-making process for potential warehouse closure.
+### 2. Data Visualization (Excel + Power BI)
+- Excel used for quick pivots and static visuals
+- Power BI used for:
+  - Interactive monthly order trends
+  - Orders by warehouse (volume and movement)
+  - Product category contributions via treemaps
+  - Warehouse-specific KPIs (delivery time, order size)
+  - What-if slider for stock reduction scenarios
 
-**Audience:**
+### 3. Targeted Insights (via Power BI and SQL)
+- South and West warehouses are underutilized
+- Inventory levels can be reduced by up to 70% with no service impact
+- Merging South + West provides operational efficiency and reduces complexity
 
-- Data analysts
-- Inventory management professionals
-- Business decision-makers interested in data-driven optimization
-- Anyone exploring SQL for data analysis and business problem-solving"
+---
+
+## ✅ Final Recommendation
+- Consolidate the inventory of Warehouse D with Warehouse C (Power BI analysis: South + West)
+- Maintain ~35K stock levels in North and East
+- Use what-if simulation to validate 70% inventory reduction feasibility
+- Proceed with cost-benefit validation and phased rollout of new warehouse configuration
+
+---
+
+## 🛠️ Tools & Technologies
+- **SQL** (MySQL Workbench): data extraction, joins, aggregations
+- **Excel**: data cleaning, EDA, pivot charts
+- **Power BI**: dashboard development, what-if analysis, KPIs
+
+---
+
+## 📁 Files Included
+- `warehouse_analysis.sql`: SQL logic and data queries
+- `inventory_dashboard.xlsx`: pivot charts and visual analysis
+- `inventory_dashboard.pbix`: full Power BI dashboard (4 pages)
+- `case_summary.pdf`: one-page business case summary
+- `Final_Report.pdf`: PDF export with visual insights and KPI findings
+
+---
+
+## 👨‍💼 Audience
+- Data analysts and BI professionals
+- Operations and warehouse managers
+- Recruiters and hiring managers assessing dashboarding & analytics skills
+- Business leaders exploring inventory optimization through data
+
+---
+
+**Created by:** Elsayed Aboelmaaty  
+**Role:** Business Operations & Data Analyst  
+**Date:** July 2025
+
