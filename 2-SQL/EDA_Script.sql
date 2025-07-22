@@ -108,33 +108,47 @@ ORDER BY
 
 -- 3- What is the percentage of moving stock for each warehouse?
 
+-- Moving Stock % = quantity ordered / quantity in stock
+
+-- Step 1: Get stock quantity per warehouse
+WITH stock_per_warehouse AS (
+    SELECT
+        warehousecode,
+        SUM(quantityinstock) AS total_stock
+    FROM products
+    GROUP BY warehousecode
+),
+
+-- Step 2: Get quantity ordered per warehouse
+orders_per_warehouse AS (
+    SELECT
+        p.warehousecode,
+        SUM(o.quantityordered) AS total_orders
+    FROM products p
+    JOIN orderdetails o ON p.productcode = o.productcode
+    GROUP BY p.warehousecode
+)
+
+-- Step 3: Join both results and calculate %
 SELECT
-    p.warehousecode,
-       Sum(o.quantityordered) AS
-       total_items_Orders,
-       Sum(p.quantityinstock) AS
-       total_quantity,
-       ( ( Sum(o.quantityordered) / Sum(p.quantityinstock) ) * 100 ) AS
-       perecent_of_moving_stock
-FROM
-    products p
-JOIN orderdetails o
-         ON
-    p.productcode = o.productcode
-GROUP BY
-    warehousecode
-ORDER BY
-    perecent_of_moving_stock DESC;
+    s.warehousecode,
+    o.total_orders,
+    s.total_stock,
+    ROUND((o.total_orders * 1.0 / s.total_stock) * 100, 2) AS moving_stock_percent
+FROM stock_per_warehouse s
+JOIN orders_per_warehouse o ON s.warehousecode = o.warehousecode
+ORDER BY moving_stock_percent DESC;
 
 /*
-        warehousecode|total_items_Orders|total_quantity|perecent_of_moving_stock|
-        -------------+------------------+--------------+------------------------+
-        d            |             22351|       2186871|                  1.0221|
-        a            |             24650|       3659553|                  0.6736|
-        c            |             22933|       3439570|                  0.6667|
-        b            |             35582|       5844033|                  0.6089|
-    
-    as we can see the South warehouse has the highst percent of moving stock
+
+| warehousecode | total\_orders | total\_stock | moving\_stock\_percent |
+| ------------- | ------------- | ------------ | ---------------------- |
+| d             | 22,351        | 79,380       | 28.15%                 |
+| a             | 24,650        | 131,688      | 18.72%                 |
+| c             | 22,933        | 124,880      | 18.37%                 |
+| b             | 35,582        | 219,183      | 16.23%                 |
+
+
 
 */
 
